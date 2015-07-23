@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'pages/index'
+   root "pages#home"
+   get "index" => 'pages#index'
 
-  get 'pages/home'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
