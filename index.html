@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+.coor {
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+}
+</style>
 <script>
-   
 function myFunction(e) {
     x = e.clientX;
     y = e.clientY;
@@ -17,7 +27,8 @@ function clearCoor() {
 </head>
 <body style="margin:0px;">
 
-<div id="coordiv" style="width:199px;height:99px;border:1px solid" onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
+<div class="coor" style="width:200px;height:99px;border:1px solid" onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
+
 
 <p id="demo"></p>
 
