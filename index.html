@@ -13,7 +13,12 @@
 }
 </style>
 <script>
-
+function myFunction(e) {
+    x = e.clientX;
+    y = e.clientY;
+    coor = "Coordinates: (" + x + "," + y + ")";
+    document.getElementById("demo").innerHTML = coor
+}
 
 function clearCoor() {
     document.getElementById("demo").innerHTML = "";
@@ -25,7 +30,6 @@ function clearCoor() {
 
 <div class="coor" style="width:500px;height:350px;border:1px solid" onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
 
-<script src= "main.js"></script>
 
 <p id="demo"></p>
 
