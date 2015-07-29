@@ -18,6 +18,12 @@ function myFunction(e) {
     y = e.clientY;
     coor = "Coordinates: (" + x + "," + y + ")";
     document.getElementById("demo").innerHTML = coor
+
+    while(1){
+    	if (y > 300){
+    		document.getElementById("demo").innerHTML = "test"
+    	}
+    }
 }
 
 function clearCoor() {
