@@ -29,8 +29,9 @@ function myFunction(e) {
             y1 = e.clientY;
         }
         if (today.getSeconds() > s) {
+            document.getElementById("demo").innerHTML = "handshake complete";
             if ((y > y1 + 100) || (y < y1 - 100)) {
-                document.getElementById("demo").innerHTML = "handshake complete"
+                document.getElementById("demo").innerHTML = "handshake complete";
                 b = 1;
             }
         }
