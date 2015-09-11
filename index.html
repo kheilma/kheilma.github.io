@@ -16,14 +16,24 @@
 function myFunction(e) {
     x = e.clientX;
     y = e.clientY;
+    b = 0;
+    y1 = 0;
+    var s = today.getSeconds();
     coor = "Coordinates: (" + x + "," + y + ")";
     document.getElementById("demo").innerHTML = coor
-
-    
-    	if (y > 300){
-    		document.getElementById("demo").innerHTML = "test"
-    	
+    for (b) {
+        if (s == today.getSeconds()) {
+            y1 = e.clientY;
+        }
+        if (today.getSeconds() > s) {
+            if ((y > y1 + 100) || (y < y1 - 100)) {
+                document.getElementById("demo").innerHTML = "handshake complete"
+            }
+        }
+        }
     }
+    
+    	
 }
 
 function clearCoor() {

@@ -7,3 +7,4 @@ function myFunction(e) {
     document.getElementById("demo").innerHTML = coor
 }
 </script>
+
