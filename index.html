@@ -18,6 +18,7 @@ function myFunction(e) {
     y1 = e.clientY;
     var y2 = y1;
     var timer = 0;
+    var mouse = {firsty: y2};
     //coor = "Coordinates: (" + x + "," + y + ")";
     //document.getElementById("demo").innerHTML = coor;
 
@@ -34,7 +35,7 @@ function myFunction(e) {
         y1 = e.clientY;
     *///}
 
-    document.getElementById("demo").innerHTML = y2;
+    document.getElementById("demo").innerHTML = mouse.firsty;
 
     
 /*
