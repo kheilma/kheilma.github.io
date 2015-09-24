@@ -15,20 +15,26 @@
 <script>
 function myFunction(e) {
     x = e.clientX;
-    y = e.clientY;
-    coor = "Coordinates: (" + x + "," + y + ")";
+    y1 = e.clientY;
+    y2 = y1;
+    var timer = 0;
+    //coor = "Coordinates: (" + x + "," + y + ")";
     //document.getElementById("demo").innerHTML = coor;
 
-    var myTimer = setInterval(function(){myTimer()}, 1000);
+    //var myTimer = setInterval(function(){myTimer()}, 1000);
 
-    var today = new Date();
+    //var today = new Date();
 
-    var s = today.getSeconds();
-    var x = s;
+    //var s = today.getSeconds();
+    //var x = s;
 
+    /*while (1) {
+        timer++;
+        y2 = y1;
+        y1 = e.clientY;
+    */}
 
-    document.getElementById("demo").innerHTML = x;
-
+    document.getElementById("demo").innerHTML = y2;
 
     
 /*
