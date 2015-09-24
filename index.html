@@ -17,12 +17,18 @@ function myFunction(e) {
     x = e.clientX;
     y = e.clientY;
     coor = "Coordinates: (" + x + "," + y + ")";
-    document.getElementById("demo").innerHTML = coor;
+    //document.getElementById("demo").innerHTML = coor;
+
+    var myTimer = setInterval(function(){myTimer()}, 1000);
+
+    var today = new Date();
+
+    var s = today.getSeconds();
+    document.getElementById("demo").innerHTML = s;
 
 
-
-    /*while (0) {
-
+    
+/*
         y = e.clientY;
         document.getElementById("demo").innerHTML = y;
         if (s == today.getSeconds()) {
@@ -35,8 +41,8 @@ function myFunction(e) {
                 b = 1;
             }
         }
-        
-    }*/
+        */
+    
     
     	
 } 
