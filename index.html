@@ -35,6 +35,7 @@ function myFunction(e) {
     while (bool) {
         while (e.clientY > 172 && e.clientY < 520 && e.clientX > 360 && e.clientX < 860 ){
         timer++;
+        document.getElementById("demo").innerHTML = timer;
         if ((timer % 3) == 0) {
             if (e.clientY < 337){
                 bool1 = 1;
