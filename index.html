@@ -24,7 +24,7 @@ function myFunction(e) {
     var bool1 = 0;
     var bool2 = 0;
     var bool3 = 0;
-
+    var completed = 1;
     //var myTimer = setInterval(function(){myTimer()}, 1000);
 
     //var today = new Date();
@@ -34,7 +34,7 @@ function myFunction(e) {
 
     
 
-    while (e.clientY > 172 && e.clientY < 520 && e.clientX > 360 && e.clientX < 860 ){
+    while (e.clientY > 172 && e.clientY < 520 && e.clientX > 360 && e.clientX < 860 && (completed == 1) ){
         timer++;
         document.getElementById("demo").innerHTML = "why";
         if ((timer % 3) == 0) {
@@ -54,30 +54,9 @@ function myFunction(e) {
         }
         if (((bool1 != bool3) && (bool1 == bool2)) || ((bool1 == bool3) && bool1 != bool2)) { 
             bool = 0;
+            completed = 2;
             }
-        }
-    
-
-    //document.getElementById("demo").innerHTML = y2;
-
-    
-/*
-        y = e.clientY;
-        document.getElementById("demo").innerHTML = y;
-        if (s == today.getSeconds()) {
-            y1 = e.clientY;
-        }
-        if (today.getSeconds() > s) {
-            document.getElementById("demo").innerHTML = "handshake complete";
-            if ((y > y1 + 100) || (y < y1 - 100)) {
-                document.getElementById("demo").innerHTML = "handshake complete";
-                b = 1;
-            }
-        }
-        */
-    
-    
-    	
+        }  	
 } 
 
 function clearCoor() {
