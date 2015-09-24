@@ -33,7 +33,7 @@ function myFunction(e) {
 
     
 
-    while ((e.clientY > 172) && (e.clientY < 5) && (e.clientX > 360) && (e.clientX < 860) && (completed == 1)){
+    do{
         timer++;
         document.getElementById("demo").innerHTML = "why";
         if ((timer % 3) == 0) {
@@ -55,7 +55,8 @@ function myFunction(e) {
             bool = 0;
             completed = 2;
             }
-        }  	
+        } 
+        while ((e.clientY > 172) && (e.clientY < 5) && (e.clientX > 360) && (e.clientX < 860) && (completed == 1)); 	
 } 
 
 
