@@ -16,7 +16,7 @@
 function myFunction(e) {
     x = e.clientX;
     y1 = e.clientY;
-    var timer = 0;
+    var timertime = 0;
     var bool = 1;
     coor = "Coordinates: (" + x + "," + y1 + ")";
     document.getElementById("demo").innerHTML = coor;
@@ -24,35 +24,29 @@ function myFunction(e) {
     var bool2 = 0;
     var bool3 = 0;
     var completed = 1;
-    //var myTimer = setInterval(function(){myTimer()}, 1000);
-
-    //var today = new Date();
-
-    //var s = today.getSeconds();
-    //var x = s;
+    
 
     
 
     do{
-        timer++;
+        timertime++;
         document.getElementById("demo").innerHTML = "why";
-        if ((timer % 3) == 0) {
+        if ((timertime % 3) == 0) {
             if (e.clientY < 337){
                 bool1 = 1;
             }
         }
-        if ((timer % 3) == 1) { 
+        if ((timertime % 3) == 1) { 
             if (e.clientY < 337){
                 bool 2 = 1;
             }
         }
-        if ((timer % 3) == 2){ 
+        if ((timertime % 3) == 2){ 
             if (e.clientY < 337) {
                 bool3 = 1;
             }
         }
         if (((bool1 != bool3) && (bool1 == bool2)) || ((bool1 == bool3) && bool1 != bool2)) { 
-            bool = 0;
             completed = 2;
             }
         } 
