@@ -18,9 +18,12 @@ function myFunction(e) {
     y1 = e.clientY;
     var y2 = y1;
     var timer = 0;
-
+    var bool = 1;
     coor = "Coordinates: (" + x + "," + y1 + ")";
     document.getElementById("demo").innerHTML = coor;
+    var bool1;
+    var bool2;
+    var bool3;
 
     //var myTimer = setInterval(function(){myTimer()}, 1000);
 
@@ -29,11 +32,29 @@ function myFunction(e) {
     //var s = today.getSeconds();
     //var x = s;
 
-    /*while (1) {
-        while (y2 > 172 && y2 < 520 && )
+    while (bool) {
+        while (e.clientY > 172 && e.clientY < 520 && e.clientX > 360 && e.clientX < 860 ){
         timer++;
-        
-    }*/
+        if ((timer & 3) == 0) {
+            if (e.clientY < 337){
+                bool1 = 1;
+            }
+        }
+        if ((timer & 3) == 1) { 
+            if (e.clientY < 337){
+                bool 2 = 1;
+            }
+        }
+        if ((timer & 3) == 2){ 
+            if (e.clientY < 337) {
+                bool3 = 1;
+            }
+        }
+        if (((bool1 != bool3) && (bool1 == bool2)) || ((bool1 == bool3) && bool1 != bool2)) { 
+            bool = 0;
+            }
+        }
+    }
 
     //document.getElementById("demo").innerHTML = y2;
 
