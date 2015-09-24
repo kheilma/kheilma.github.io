@@ -30,7 +30,6 @@ function myFunction(e) {
 
     do{
         timertime++;
-        document.getElementById("demo").innerHTML = "why";
         if ((timertime % 3) == 0) {
             if (e.clientY < 337){
                 bool1 = 1;
@@ -50,7 +49,7 @@ function myFunction(e) {
             completed = 2;
             }
         } 
-        while ((e.clientY > 172) && (e.clientY < 520) && (e.clientX > 360) && (e.clientX < 860) && (completed == 1)); 	
+        while ((e.clientY > 172) && (e.clientY < 520) && (completed == 1)); 	
 } 
 
 
