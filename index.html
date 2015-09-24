@@ -16,10 +16,9 @@
 function myFunction(e) {
     x = e.clientX;
     y1 = e.clientY;
-    var y2 = y1;
+    const var y2 = y1;
     var timer = 0;
-    var mouse = {firsty: y2};
-    mouse.seal();
+
     //coor = "Coordinates: (" + x + "," + y + ")";
     //document.getElementById("demo").innerHTML = coor;
 
@@ -36,7 +35,7 @@ function myFunction(e) {
         y1 = e.clientY;
     *///}
 
-    document.getElementById("demo").innerHTML = mouse.firsty;
+    document.getElementById("demo").innerHTML = y2;
 
     
 /*
