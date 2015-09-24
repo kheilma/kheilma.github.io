@@ -30,6 +30,7 @@ function myFunction(e) {
 
     do{
         timertime++;
+        document.getElementById("demo").innerHTML = timertime;
         if ((timertime % 3) == 0) {
             if (e.clientY < 337){
                 bool1 = 1;
