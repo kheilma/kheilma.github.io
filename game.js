@@ -24,8 +24,6 @@ var TEXT_PRELOADING = "Loading ...",
 	
 	
 	
-	
-
 
 
 var stage = document.getElementById("gameCanvas");
