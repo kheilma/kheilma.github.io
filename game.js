@@ -14,9 +14,9 @@ function update()
 {
 	counter++;
 
-	ctx.fillStyle = "#AAA";
+	ctx.fillStyle = "black";
 	ctx.fillRect(0, 0, stage.width, stage.height);
 
-	ctx.fillStyle = "#000";
-	ctx.fillText(counter, COUNTER_X, COUNTER_Y);
+	ctx.fillStyle = "white";
+	ctx.fillText("Time is: "counter, COUNTER_X, COUNTER_Y);
 }
