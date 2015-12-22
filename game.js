@@ -4,7 +4,7 @@ var STAGE_WIDTH = 600,
 	TIME_PER_FRAME = 33, //this equates to 30 fps
 	GAME_FONTS = "bold 20px sans-serif";
 
-var PATH_CHAR = "img/spritesheet.png";
+//var PATH_CHAR = "img/spritesheet.png";
 
 var CHAR_WIDTH = 72,
 	CHAR_HEIGHT = 96,
