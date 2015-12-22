@@ -1,0 +1,7 @@
+var STAGE_WIDTH = 600,
+	STAGE_HEIGHT = 400,
+	TIMER_PER_FRAME = 33,
+	GAME_FONTS = "bold 20px sans-serif";
+
+var COUNTER_X= 100,
+	   COUNTER_Y = 100;

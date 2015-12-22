@@ -1,67 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.coor {
-   position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -170px;
-    margin-left: -250px;
-    width: 3px;
-    height: 150px;
-}
-</style>
-<script>
-function myFunction(e) {
-    x = e.clientX;
-    y1 = e.clientY;
-    var timertime = 0;
-    var bool = 1;
-    coor = "Coordinates: (" + x + "," + y1 + ")";
-    //document.getElementById("demo").innerHTML = coor;
-    var bool1 = 0;
-    var bool2 = 0;
-    var bool3 = 0;
-    var completed = 1;
-    
-
-    
-
-    do{
-        timertime++;
-        if ((timertime % 3) == 0) {
-            if (e.clientY < 337){
-                bool1 = 1;
-            }
-        }
-        if ((timertime % 3) == 1) { 
-            if (e.clientY < 337){
-                bool2 = 1;
-            }
-        }
-        if ((timertime % 3) == 2){ 
-            if (e.clientY < 337) {
-                bool3 = 1;
-            }
-        }
-        if (((bool1 != bool3) && (bool1 == bool2)) || ((bool1 == bool3) && bool1 != bool2)) { 
-            completed = 2;
-            }
-        } 
-        while ((e.clientY > 172) && (e.clientY < 520) && (completed == 1)); 	
-} 
-
-
-</script>
+    <meta http_equiv="Content-Type" content="text/html; charset=UTF-8"
 </head>
-
-<body style="margin:0px;">
-
-<div class="coor" style="width:500px;height:350px;border:1px solid" onmousemove="myFunction(event)"></div>
-
-
-<p id="demo"></p>
+<body>
+    <canvas id="gameCanvas">
+        Upgrade your browser to support HTML5.<br/>
+    </canvas>
+    <script type="text/javascript" src="constants.js"></script>
+    <script type="text/javascript" src="game.js"></script>
 
 </body>
 </html>
