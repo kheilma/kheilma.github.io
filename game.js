@@ -46,7 +46,7 @@ function setAssetReady()
 
 //Display Preloading
 ctx.fillRect(0,0,stage.width,stage.height);
-ctx.fillStyle = "#000";
+ctx.fillStyle = "black";
 ctx.fillText(TEXT_PRELOADING, TEXT_PRELOADING_X, TEXT_PRELOADING_Y);
 var preloader = setInterval(preloading, TIME_PER_FRAME);
 
