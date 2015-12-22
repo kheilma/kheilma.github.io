@@ -25,7 +25,7 @@ var TEXT_PRELOADING = "Loading ...",
 	
 	
 
-
+window.onload=function(){
 var stage = document.getElementById("gameCanvas");
 stage.width = STAGE_WIDTH;
 stage.height = STAGE_HEIGHT;
@@ -158,7 +158,7 @@ function update()
 
 }
 
-
+}
 
 
 
