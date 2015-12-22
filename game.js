@@ -1,4 +1,4 @@
-var stage = document.getElementById("gamecanvas");
+var stage = document.getElementById("gameCanvas");
 stage.width = STAGE_WIDTH;
 stage.height = STAGE_HEIGHT;
 var ctx = stage.getContext("2d");
