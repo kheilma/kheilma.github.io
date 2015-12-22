@@ -4,7 +4,7 @@ var STAGE_WIDTH = 600,
 	TIME_PER_FRAME = 33, //this equates to 30 fps
 	GAME_FONTS = "bold 20px sans-serif";
 
-//var PATH_CHAR = "img/spritesheet.png";
+var PATH_CHAR = "img/spritesheet.png";
 
 var CHAR_WIDTH = 72,
 	CHAR_HEIGHT = 96,
@@ -22,6 +22,10 @@ var TEXT_PRELOADING = "Loading ...",
 	TEXT_PRELOADING_X = 200, 
 	TEXT_PRELOADING_Y = 200;
 	
+	
+	
+	
+
 
 
 var stage = document.getElementById("gameCanvas");
@@ -31,11 +35,7 @@ var ctx = stage.getContext("2d");
 ctx.fillStyle = "grey";
 ctx.font = GAME_FONTS;
 
-//---------------
-//Preloading ...
-//---------------
-//Preload Art Assets
-// - Sprite Sheet
+
 var charImage = new Image();
 charImage.ready = false;
 charImage.onload = setAssetReady;
