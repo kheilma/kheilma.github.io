@@ -2,46 +2,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Kyle Heilman</title>
+<title>Gaminglogy Game Set Up</title>
 </head>
 <body>
-   
-
     <canvas id="gameCanvas">
+        Please upgrade your browser to support HTML5.<br/> 
+        One recommendation is to install the latest Chrome or Firefox.
     </canvas>
     <script type="text/javascript" src="constants.js"></script>
     <script type="text/javascript" src="game.js"></script>
-     <script type = "text/javascript">
-    var STAGE_WIDTH = 600,
-    STAGE_HEIGHT = 400,
-    TIMER_PER_FRAME = 33,
-    GAME_FONTS = "bold 20px sans-serif";
-
-     var COUNTER_X= 100,
-       COUNTER_Y = 100;
-
-       var stage = document.getElementById("gameCanvas");
-stage.width = STAGE_WIDTH;
-stage.height = STAGE_HEIGHT;
-
-var ctx = stage.getContext("2d");
-ctx.fillStyle = "black";
-ctx.font = GAME_FONTS;
-
-var gameloop = setInterval(update, TIME_PER_FRAME);
-var counter = 0;
-
-
-function update()
-{
-    counter++;
-
-    ctx.fillStyle = "#AAA";
-    ctx.fillRect(0, 0, stage.width, stage.height);
-
-    ctx.fillStyle = "#000";
-    ctx.fillText(counter, COUNTER_X, COUNTER_Y);
-}
-</script>
 </body>
 </html>
+
+
