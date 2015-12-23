@@ -3,20 +3,34 @@
 <head>
 	<img src="img/spritesheet.png" id="bg" alt="">
 	<style type ="text/css"> 
-	img.bg {
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
+	#bg { position: fixed; top: 0; left: 0; }
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
 
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
+//jQuery
+$(window).load(function() {    
 
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
-}
+        var theWindow        = $(window),
+            $bg              = $("#bg"),
+            aspectRatio      = $bg.width() / $bg.height();
+
+        function resizeBg() {
+
+                if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
+                    $bg
+                        .removeClass()
+                        .addClass('bgheight');
+                } else {
+                    $bg
+                        .removeClass()
+                        .addClass('bgwidth');
+                }
+
+        }
+
+        theWindow.resize(resizeBg).trigger("resize");
+
+});
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
   img.bg {
