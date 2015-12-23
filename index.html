@@ -3,40 +3,12 @@
 <head>
 	<img src="img/spritesheet.png" id="bg" alt="">
 	<style type ="text/css"> 
-	#bg { position: fixed; top: 0; left: 0; }
-.bgwidth { width: 100%; }
-.bgheight { height: 100%; }
-
-//jQuery
-$(window).load(function() {    
-
-        var theWindow        = $(window),
-            $bg              = $("#bg"),
-            aspectRatio      = $bg.width() / $bg.height();
-
-        function resizeBg() {
-
-                if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
-                    $bg
-                        .removeClass()
-                        .addClass('bgheight');
-                } else {
-                    $bg
-                        .removeClass()
-                        .addClass('bgwidth');
-                }
-
-        }
-
-        theWindow.resize(resizeBg).trigger("resize");
-
-});
-
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img.bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
+	html { 
+  background: url(spritesheet.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 	
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
