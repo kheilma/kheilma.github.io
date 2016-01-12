@@ -18,7 +18,7 @@ var CHAR_WIDTH = 200,
 	IMAGE_START_WEST_Y = 288,	
 	SPRITE_WIDTH = 216;
 
-var TEXT_PRELOADING = "Loadinghahaggf ...", 
+var TEXT_PRELOADING = "Loadinghahaggfs ...", 
 	TEXT_PRELOADING_X = 200, 
 	TEXT_PRELOADING_Y = 200;
 	
@@ -64,7 +64,7 @@ var gameloop, facing, currX, currY, charX, charY, isMoving;
 
 function preloading()
 {	
-	if (charImage.ready)
+	if (charImage.ready || stageImage.ready)
 	{
 		clearInterval(preloader);
 		
