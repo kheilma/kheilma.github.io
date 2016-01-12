@@ -42,7 +42,7 @@ charImage.ready = false;
 charImage.onload = setAssetReady;
 //charImage.src = PATH_CHAR;
 var stageImage = new Image();
-stageImage.ready = true;
+//stageImage.ready = true;
 stageImage.src = PATH_CHAR;
 
 function setAssetReady()
@@ -53,8 +53,8 @@ function setAssetReady()
 //Display Preloading
 //ctx.fillRect(0,0,stage.width,stage.height);
 //ctx.fillStyle = "#000";
-ctx.drawImage(stageImage,currX,currY,STAGE_WIDTH,STAGE_HEIGHT,
-					charX,charY,STAGE_WIDTH,STAGE_HEIGHT);
+ctx.drawImage(stageImage,currX,currY,stage.width,stage.height,
+					100,100,stage.width,stage.height);
 ctx.fillText(TEXT_PRELOADING, TEXT_PRELOADING_X, TEXT_PRELOADING_Y);
 var preloader = setInterval(preloading, TIME_PER_FRAME);
 
@@ -132,7 +132,7 @@ function update()
 	//ctx.fillRect(0, 0, stage.width, stage.height);	
 	ctx.drawImage(stageImage,currX,currY,STAGE_WIDTH,STAGE_HEIGHT,
 					charX,charY,STAGE_WIDTH,STAGE_HEIGHT);
-	
+
 	if (isMoving)
 	{
 		if (facing == "N")
