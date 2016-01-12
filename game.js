@@ -4,10 +4,10 @@ var STAGE_WIDTH = 1400,
 	TIME_PER_FRAME = 33, //this equates to 30 fps
 	GAME_FONTS = "bold 20px sans-serif";
 
-var PATH_CHAR = "img/booop.gif";
+var PATH_CHAR = "img/here.gif";
 
-var CHAR_WIDTH = 72,
-	CHAR_HEIGHT = 96,
+var CHAR_WIDTH = 200,
+	CHAR_HEIGHT = 150,
 	CHAR_START_X = 200,
 	CHAR_START_Y = 200,
 	CHAR_SPEED = 5,
