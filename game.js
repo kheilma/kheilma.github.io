@@ -128,8 +128,10 @@ currY = IMAGE_START_EAST_Y;
 function update()
 {		
 	//Clear Canvas
-	ctx.fillStyle = "grey";
-	ctx.fillRect(0, 0, stage.width, stage.height);	
+	//ctx.fillStyle = "grey";
+	//ctx.fillRect(0, 0, stage.width, stage.height);	
+	ctx.drawImage(stageImage,currX,currY,STAGE_WIDTH,STAGE_HEIGHT,
+					charX,charY,STAGE_WIDTH,STAGE_HEIGHT);
 	
 	if (isMoving)
 	{
