@@ -18,7 +18,7 @@ var CHAR_WIDTH = 200,
 	IMAGE_START_WEST_Y = 288,	
 	SPRITE_WIDTH = 216;
 
-var TEXT_PRELOADING = "Loadinghahagg ...", 
+var TEXT_PRELOADING = "Loadinghahaggf ...", 
 	TEXT_PRELOADING_X = 200, 
 	TEXT_PRELOADING_Y = 200;
 	
@@ -43,6 +43,8 @@ charImage.onload = setAssetReady;
 //charImage.src = PATH_CHAR;
 var stageImage = new Image();
 //stageImage.ready = true;
+stageImage.ready = false;
+stageImage.onload = setAssetReady;
 stageImage.src = PATH_CHAR;
 
 function setAssetReady()
