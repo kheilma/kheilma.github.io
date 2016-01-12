@@ -18,7 +18,7 @@ var CHAR_WIDTH = 200,
 	IMAGE_START_WEST_Y = 288,	
 	SPRITE_WIDTH = 216;
 
-var TEXT_PRELOADING = "Loading ...", 
+var TEXT_PRELOADING = "Loadinghaha ...", 
 	TEXT_PRELOADING_X = 200, 
 	TEXT_PRELOADING_Y = 200;
 	
