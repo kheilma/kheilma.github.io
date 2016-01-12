@@ -40,7 +40,10 @@ ctx.font = GAME_FONTS;
 var charImage = new Image();
 charImage.ready = false;
 charImage.onload = setAssetReady;
-charImage.src = PATH_CHAR;
+//charImage.src = PATH_CHAR;
+var stageImage = new Image();
+stageImage.ready = true;
+stageImage.src = PATH_CHAR;
 
 function setAssetReady()
 {
@@ -48,8 +51,10 @@ function setAssetReady()
 }
 
 //Display Preloading
-ctx.fillRect(0,0,stage.width,stage.height);
-ctx.fillStyle = "#000";
+//ctx.fillRect(0,0,stage.width,stage.height);
+//ctx.fillStyle = "#000";
+ctx.drawImage(stageImage,currX,currY,STAGE_WIDTH,STAGE_HEIGHT,
+					charX,charY,STAGE_WIDTH,STAGE_HEIGHT);
 ctx.fillText(TEXT_PRELOADING, TEXT_PRELOADING_X, TEXT_PRELOADING_Y);
 var preloader = setInterval(preloading, TIME_PER_FRAME);
 
