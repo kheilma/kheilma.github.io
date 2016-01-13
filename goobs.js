@@ -88,9 +88,7 @@ var render = function () {
 	if (bgReady) {
 
 		ctx.drawImage(bgImage, 0, 0);
-		int i = 0; 
-		while (i < 10){ 
-			i++;}
+		
 	}
 
 	if (heroReady) {
