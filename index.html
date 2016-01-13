@@ -12,14 +12,14 @@
 <title>Kyle Heilman</title>
 </head>
 <body>
-    <img id = "mygif" src = "img/here.gif">
+    <div id = "myDiv"><img id = "mygif" src = "img/here.gif"></div><br>
     <script type = "text/javascript"> 
     function show() {
-        document.getElementById("mygif").style.display="block";
+        document.getElementById("myDiv").style.display="block";
         setTimeout("hide()", 5000);
       }
       function hide() {
-        document.getElementById("mygif").style.display="none";
+        document.getElementById("myDiv").style.display="none";
       }
       
       show();
