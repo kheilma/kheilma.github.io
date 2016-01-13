@@ -13,15 +13,25 @@
 </head>
 <body>
     <div id = "myDiv"><img id = "mygif" src = "img/here.gif"></div><br>
-    
+
     <script type = "text/javascript"> 
     function show() {
         document.getElementById("myDiv").style.display="block";
         setTimeout("hide()", 3500);
       }
+    function include(filename)
+    {
+    var head = document.getElementsByTagName('head')[0];
+
+    var script = document.createElement('script');
+    script.src = filename;
+    script.type = 'text/javascript';
+
+    head.appendChild(script)
+    }
       function hide() {
         document.getElementById("myDiv").style.display="none";
-        $("head").append('<script type="text/javascript" src="' + "goobs.js" + '"></script>');
+        include("goobs.js");
       }
       
       show();
