@@ -86,11 +86,12 @@ var update = function (modifier) {
 // Draw everything
 var render = function () {
 	if (bgReady) {
+
 		ctx.drawImage(bgImage, 0, 0);
 	}
 
 	if (heroReady) {
-		ctx.drawImage(heroImage, hero.x, hero.y);
+		//ctx.drawImage(heroImage, hero.x, hero.y);
 	}
 
 	if (monsterReady) {
