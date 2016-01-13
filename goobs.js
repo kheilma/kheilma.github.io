@@ -89,7 +89,7 @@ var render = function () {
 
 		ctx.drawImage(bgImage, 0, 0);
 		int i = 0; 
-		if (i < 100000){ 
+		while (i < 1000){ 
 			i ++;}
 	}
 
