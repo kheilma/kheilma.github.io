@@ -16,15 +16,16 @@
     <script type = "text/javascript"> 
     function show() {
         document.getElementById("myDiv").style.display="block";
-        setTimeout("hide()", 5000);
+        setTimeout("hide()", 3500);
       }
       function hide() {
         document.getElementById("myDiv").style.display="none";
+        $("head").append('<script type="text/javascript" src="' + "goobs.js" + '"></script>');
       }
       
       show();
      </script>
-    <script type="text/javascript" src="goobs.js"></script>
+    
 </body>
 </html>
 
