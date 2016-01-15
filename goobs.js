@@ -87,7 +87,7 @@ var update = function (modifier) {
 var render = function () {
 	if (bgReady) {
 
-		ctx.drawImage(bgImage, (screen.width/2), (screen.height/2));
+		ctx.drawImage(bgImage, (screen.width/2) - canvas.width, (screen.height/2) - canvas.height);
 		
 	}
 
