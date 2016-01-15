@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <canvas id="canvas" width="400" height="300"></canvas>
   
 	<style type ="text/css"> 
     html, body { width: 100%;
@@ -23,7 +22,7 @@
 </head>
 <body>
     <div id = "myDiv"><img id = "mygif" src = "img/here.gif"></div><br>
-
+    <canvas id="canvas" width="400" height="300"></canvas>
     <script type = "text/javascript"> 
     function show() {
         document.getElementById("myDiv").style.display="block";
@@ -41,7 +40,7 @@
     }
       function hide() {
         document.getElementById("myDiv").style.display="none";
-        include("goobs.js");
+        //include("goobs.js");
       }
       
       show();
