@@ -50,7 +50,7 @@
 var ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-ctx.canvas.width = document.body.clientWidth; 
+//ctx.canvas.width = document.body.clientWidth; 
 //document.body.appendChild(canvas);
 
 // Background image
@@ -141,7 +141,7 @@ var render = function () {
   }
 
   if (heroReady) {
-   // ctx.drawImage(heroImage, hero.x, hero.y);
+    ctx.drawImage(heroImage, hero.x, hero.y);
   }
 
   if (monsterReady) {
