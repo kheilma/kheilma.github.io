@@ -94,7 +94,11 @@ var update = function (modifier) {
 var render = function () {
 	if (bgReady) {
 
+<<<<<<< HEAD
 		ctx.drawImage(bgImage, 0 , 0;
+=======
+		ctx.drawImage(bgImage, (screen.width/2) - canvas.width, (screen.height/2) - canvas.height);
+>>>>>>> parent of 55d9597... middle
 		
 	}
 
