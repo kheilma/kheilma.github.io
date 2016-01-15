@@ -1,7 +1,7 @@
-var canvas = document.createElement("canvas");
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.innerWidth * .8;
+canvas.height = window.innerHeight * .8;
 document.body.appendChild(canvas);
 
 // Background image
@@ -87,7 +87,7 @@ var update = function (modifier) {
 var render = function () {
 	if (bgReady) {
 
-		ctx.drawImage(bgImage, (screen.width/2) - window.innerWidth, (screen.height/2) - window.innerHeight);
+		ctx.drawImage(bgImage, (screen.width/2) - , (screen.height/2) - window.innerHeight);
 		
 	}
 
