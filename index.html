@@ -136,12 +136,12 @@ var update = function (modifier) {
 var render = function () {
   if (bgReady) {
 
-    ctx.drawImage(bgImage, 0, 0, bgImage.width * .7, bgImage.height * .7);
+    ctx.drawImage(bgImage, hero.x, hero.y, bgImage.width * .7, bgImage.height * .7);
     
   }
 
   if (heroReady) {
-    ctx.drawImage(heroImage, hero.x, hero.y);
+   // ctx.drawImage(heroImage, hero.x, hero.y);
   }
 
   if (monsterReady) {
