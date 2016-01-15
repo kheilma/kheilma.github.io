@@ -1,7 +1,14 @@
-var canvas = document.getElementById('canvas');
+var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
+canvas.style.display = "block";
+canvas.style.margin = "auto";
+canvas.style.position = "absolute";
+cavas.style.top = 0;
+cavas.style.bottom = 0;
+canvas.style.left = 0;
+canvas.style.right = 0;
 canvas.width = window.innerWidth * .8;
-canvas.height = window.innerHeight * .8;
+canvas.height = window.innerHeight *.8;
 document.body.appendChild(canvas);
 
 // Background image
