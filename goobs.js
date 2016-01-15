@@ -1,5 +1,11 @@
 var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
+canvas.style.margin = "auto";
+canvas.style.position="absolute";
+canvas.style.top=0;
+canvas.style.bottom=0;
+canvas.style.left=0;
+canvas.style.right=0;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 document.body.appendChild(canvas);
