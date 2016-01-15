@@ -1,14 +1,7 @@
 var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
-canvas.style.display = "block";
-canvas.style.margin = "auto";
-canvas.style.position = "absolute";
-cavas.style.top = 0;
-cavas.style.bottom = 0;
-canvas.style.left = 0;
-canvas.style.right = 0;
-canvas.width = window.innerWidth * .8;
-canvas.height = window.innerHeight *.8;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 document.body.appendChild(canvas);
 
 // Background image
@@ -94,15 +87,7 @@ var update = function (modifier) {
 var render = function () {
 	if (bgReady) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-		ctx.drawImage(bgImage, 0 , 0;
-=======
-		ctx.drawImage(bgImage, (screen.width/2) - canvas.width, (screen.height/2) - canvas.height);
->>>>>>> parent of 55d9597... middle
-=======
-		ctx.drawImage(bgImage, (screen.width/2) - canvas.width, (screen.height/2) - canvas.height);
->>>>>>> parent of 55d9597... middle
+		ctx.drawImage(bgImage, 0, 0;
 		
 	}
 
