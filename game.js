@@ -1,178 +1,174 @@
+function show() {
+        document.getElementById("myDiv").style.display="block";
+        setTimeout("hide()", 2410);
+      }
+    function include(filename)
+    {
+    var head = document.getElementsByTagName('head')[0];
 
-var STAGE_WIDTH = 1400,
-	STAGE_HEIGHT = 800,
-	TIME_PER_FRAME = 33, //this equates to 30 fps
-	GAME_FONTS = "bold 20px sans-serif";
+    var script = document.createElement('script');
+    script.src = filename;
+    script.type = 'text/javascript';
 
-var PATH_CHAR = "img/here.gif";
+    head.appendChild(script)
+    }
+      function hide() {
+        document.getElementById("myDiv").style.display="none";
+        //include("goobs.js");
+        game();
+      }
+      
 
-var CHAR_WIDTH = 200,
-	CHAR_HEIGHT = 150,
-	CHAR_START_X = 200,
-	CHAR_START_Y = 200,
-	CHAR_SPEED = 5,
-	IMAGE_START_X = 0,
-	IMAGE_START_NORTH_Y = 0,
-	IMAGE_START_EAST_Y = 0,
-	IMAGE_START_SOUTH_Y = 0,
-	IMAGE_START_WEST_Y = 0,	
-	SPRITE_WIDTH = 216;
+      function game() {
+       var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+canvas.width = 1366;
+canvas.height = 768;
+//ctx.canvas.width = document.body.clientWidth; 
+//document.body.appendChild(canvas);
 
-var TEXT_PRELOADING = "Loadinghahaggfsq ...", 
-	TEXT_PRELOADING_X = 200, 
-	TEXT_PRELOADING_Y = 200;
-	
-	
-	
-	
-var stage = document.getElementById("gameCanvas");
-stage.width = STAGE_WIDTH;
-stage.height = STAGE_HEIGHT;
-var ctx = stage.getContext("2d");
-ctx.fillStyle = "grey";
-ctx.font = GAME_FONTS;
+// Background image
+var bgReady = false;
+var bgImage = new Image();
+bgImage.onload = function () {
+  bgReady = true;
+};
+bgImage.src = "img/back.jpg";
 
-//---------------
-//Preloading ...
-//---------------
-//Preload Art Assets
-// - Sprite Sheet
-var charImage = new Image();
-charImage.ready = false;
-charImage.onload = setAssetReady;
-//charImage.src = PATH_CHAR;
-var stageImage = new Image();
-//stageImage.ready = true;
-stageImage.ready = false;
-stageImage.onload = setAssetReady;
-stageImage.src = PATH_CHAR;
+// Hero image
+var heroReady = false;
+var heroImage = new Image();
+heroImage.onload = function () {
+  heroReady = true;
+};
+heroImage.src = "img/spaceship.png";
 
-function setAssetReady()
-{
-	this.ready = true;
-}
+// Monster image
+var monsterReady = false;
+var monsterImage = new Image();
+monsterImage.onload = function () {
+  monsterReady = true;
+};
+//monsterImage.src = "img/monster.png";
 
-//Display Preloading
-//ctx.fillRect(0,0,stage.width,stage.height);
-//ctx.fillStyle = "#000";
-//ctx.drawImage(stageImage,currX,currY,stage.width,stage.height,
-					//100,100,stage.width,stage.height);
-ctx.fillText(TEXT_PRELOADING, TEXT_PRELOADING_X, TEXT_PRELOADING_Y);
-var preloader = setInterval(preloading, TIME_PER_FRAME);
+// Game objects
+var hero = {
+  speed: 300 // movement in pixels per second
+};
+var monster = {};
+var monstersCaught = 0;
 
-var gameloop, facing, currX, currY, charX, charY, isMoving;
+// Handle keyboard controls
+var keysDown = {};
 
-function preloading()
-{	
-	if (charImage.ready || stageImage.ready)
-	{
-		clearInterval(preloader);
-		
-		//Initialise game
-		facing = "E"; //N = North, E = East, S = South, W = West
-		isMoving = false;
-		
-		gameloop = setInterval(update, TIME_PER_FRAME);			
-		document.addEventListener("keydown",keyDownHandler, false);	
-		document.addEventListener("keyup",keyUpHandler, false);	
-	}
-}
+addEventListener("keydown", function (e) {
+  keysDown[e.keyCode] = true;
+}, false);
 
-//------------
-//Key Handlers
-//------------
-function keyDownHandler(event)
-{
-	var keyPressed = String.fromCharCode(event.keyCode);
+addEventListener("keyup", function (e) {
+  delete keysDown[e.keyCode];
+}, false);
 
-	if (keyPressed == "W")
-	{		
-		facing = "N";
-		isMoving = true;
-	}
-	else if (keyPressed == "D")
-	{	
-		facing = "E";
-		isMoving = true;		
-	}
-	else if (keyPressed == "S")
-	{	
-		facing = "S";
-		isMoving = true;		
-	}
-	else if (keyPressed == "A")
-	{	
-		facing = "W";
-		isMoving = true;		
-	}
-}
+// Reset the game when the player catches a monster
+var reset = function () {
+  hero.x = canvas.width / 2 - 100;
+  hero.y = canvas.height / 2.2 + 70;
 
-function keyUpHandler(event)
-{
-	var keyPressed = String.fromCharCode(event.keyCode);
-	
-	if ((keyPressed == "W") || (keyPressed == "A") || 
-		(keyPressed == "S") || (keyPressed == "D"))
-	{
-		isMoving = false;
-	}
-}
+  // Throw the monster somewhere on the screen randomly
+  monster.x = 32 + (Math.random() * (canvas.width - 64));
+  monster.y = 32 + (Math.random() * (canvas.height - 64));
+};
 
-//------------
-//Game Loop
-//------------
-charX = CHAR_START_X;
-charY = CHAR_START_Y;
+// Update game objects
+var update = function (modifier) {
+  if (38 in keysDown) { // Player holding up
+   // hero.y -= hero.speed * modifier;
+  }
+  if (40 in keysDown) { // Player holding down
+    //hero.y += hero.speed * modifier;
+  }
+  if (37 in keysDown) { // Player holding left
+    hero.x -= hero.speed * modifier;
+    if (hero.x < -80){
+    	hero.x = -80;
+    }
+  }
+  if (39 in keysDown) { // Player holding right
+    hero.x += hero.speed * modifier;
+    if (hero.x > 1150) {
+    	//add website
+    }
+  }
+  if(32 in keysDown) { //Holding space
+  	if(hero.x > 400 && hero.x < 500) {
+  		hero.x = 800;
+  	}
+  	if(hero.x < 830 && hero.x > 740) {
+  		hero.x = 750;
+  	}
+  	if (hero.x < 220 && hero.x > 60) {
+  		hero.x = 1150;
+  	}
+  	
+  }
 
-currX = IMAGE_START_X;
-currY = IMAGE_START_EAST_Y;
+  // Are they touching?
+  if (
+    hero.x <= (monster.x + 32)
+    && monster.x <= (hero.x + 32)
+    && hero.y <= (monster.y + 32)
+    && monster.y <= (hero.y + 32)
+  ) {
+    ++monstersCaught;
+    //reset();
+  }
+};
 
-function update()
-{		
-	//Clear Canvas
-	//ctx.fillStyle = "grey";
-	//ctx.fillRect(0, 0, stage.width, stage.height);	
-	ctx.drawImage(stageImage,currX,currY,STAGE_WIDTH,STAGE_HEIGHT,
-					charX,charY,STAGE_WIDTH,STAGE_HEIGHT);
+// Draw everything
+var render = function () {
+  if (bgReady) {
 
-	if (isMoving)
-	{
-		if (facing == "N")
-		{
-			charY -= CHAR_SPEED;
-			currY = IMAGE_START_NORTH_Y;
-		}
-		else if (facing == "E")
-		{
-			charX += CHAR_SPEED;
-			currY = IMAGE_START_EAST_Y;
-		}
-		else if (facing == "S")
-		{
-			charY += CHAR_SPEED;
-			currY = IMAGE_START_SOUTH_Y;
-		}
-		else if (facing == "W")
-		{
-			charX -= CHAR_SPEED;
-			currY = IMAGE_START_WEST_Y;
-		}
-		
-		currX += CHAR_WIDTH;
-		
-		if (currX >= SPRITE_WIDTH)
-			currX = 0;
-	}
-	
-	//Draw Image
-	ctx.drawImage(charImage,currX,currY,CHAR_WIDTH,CHAR_HEIGHT,
-					charX,charY,CHAR_WIDTH,CHAR_HEIGHT);
+    ctx.drawImage(bgImage, 0, 0, bgImage.width, bgImage.height, 0, 0, canvas.width, canvas.height);
+    
+  }
 
-}
+  if (heroReady) {
+    ctx.drawImage(heroImage, hero.x, hero.y);
+  }
 
+  if (monsterReady) {
+    ctx.drawImage(monsterImage, monster.x, monster.y);
+  }
 
+  // Score
+  ctx.fillStyle = "rgb(250, 250, 250)";
+  ctx.font = "24px Helvetica";
+  ctx.textAlign = "left";
+  ctx.textBaseline = "top";
+  //ctx.fillText("Goblins caught: " + monstersCaught, 32, 32);
+};
 
+// The main game loop
+var main = function () {
+  var now = Date.now();
+  var delta = now - then;
 
+  update(delta / 1000);
+  render();
 
-	
-	
+  then = now;
+
+  // Request to do this again ASAP
+  requestAnimationFrame(main);
+};
+
+// Cross-browser support for requestAnimationFrame
+var w = window;
+requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame || w.msRequestAnimationFrame || w.mozRequestAnimationFrame;
+
+// Let's play this game!
+var then = Date.now();
+reset();
+main();
+      }
+      show();
