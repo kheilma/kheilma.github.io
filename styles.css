@@ -13,16 +13,17 @@
     right: 0;
     margin:auto;
   }
-
+body {
+    background-color: lightblue;
+  }
+  
   .divClass {
     margin: auto;
     width: 70%;
     padding: 90px;
   }
 
-  body {
-    background-color: lightblue;
-  }
+
 	
   
 
