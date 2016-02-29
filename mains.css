@@ -80,9 +80,26 @@ h5{
 	
 
 }
+h4 {
+	position: absolute;
+	top:20%;
+	right:18%;
+	font-size: 30px;
+}
 h3{
 	position: absolute;
 	color:white;
 	top:60%;
 	left:0%;
 }
+ a.button {
+ 	background-color: #f44336;
+ 	color: white;
+ 	text-align: center;
+ 	display: inline-block;
+ 	position: absolute;
+ 	right: 0%;
+ 	height: 100%;
+ 	width: 20%;
+ 	text-decoration: none;
+ }

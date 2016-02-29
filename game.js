@@ -111,7 +111,6 @@ var update = function (modifier) {
   		//hero.x = 800;
   	}
   	if(hero.x < 830 && hero.x > 740) {
-      ctx.fillText("Go right for ffdssdfsdsdsdfsdsdf", 600, 750);
   		//hero.x = 750;
   	}
   	if (hero.x < 220 && hero.x > 60) {
