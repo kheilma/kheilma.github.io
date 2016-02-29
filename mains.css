@@ -3,12 +3,7 @@ body {
 	background-color: #D3D3D3;
 }
 
-#back {
-    position: fixed;
-    width:100%;
-    height: 100%;
 
-  }
 
   #left, #right{
   	position: fixed;
@@ -39,16 +34,23 @@ IMG.cow{
 }
 IMG.git{
 	position: relative;
-	left:55%;
-	top:40%;
+	left:45%;
+	top:2%;
 
+}
+
+IMG.linkd {
+	position: relative;
+	width:15%;
+	left:15%;
+	top: 10%;
 }
 
 #box{
 	position: relative;
 	background-color: #222222;
 	width:100%;
-	height:60%;
+	height:20%;
 	z-index: -1;
 	top: 100%;
 }
@@ -70,19 +72,17 @@ h2 {
 	font-size:30px;
 	font-family: "impact";
 }
-
-h3{
-	position: absolute;
-	color:white;
-	top:30%;
-	left:17%;
-    color:white;
-}
-
 h5{
 	color:white;
 	position:absolute;
-	left:18%;
-	font-size: 60px;
+	left:0%;
+	font-size: 40px;
+	
 
+}
+h3{
+	position: absolute;
+	color:white;
+	top:60%;
+	left:0%;
 }
