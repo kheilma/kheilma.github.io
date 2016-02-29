@@ -37,6 +37,7 @@ IMG.git{
 	position: relative;
 	left:45%;
 	top:2%;
+	width:14%;
 
 }
 
@@ -57,17 +58,18 @@ IMG.linkd {
 }
 
 h1{
-	position: absolute;
+	position: relative;
 	left: 26%;
 	top: 20%;
 	font-weight: 700;
 	font-size: 500%;
 	font-family:"impact";
 	text-transform: uppercase;
+	width:50%;
 
 }	
 h2 {
-	position: absolute;
+	position: relative;
 	left: 27%;
 	top:33%;
 	font-size:200%;
