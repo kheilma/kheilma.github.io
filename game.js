@@ -33,7 +33,7 @@ var bgImage = new Image();
 bgImage.onload = function () {
   bgReady = true;
 };
-bgImage.src = "img/back.jpg";
+bgImage.src = "img/bground.jpg";
 
 // Hero image
 var heroReady = false;
@@ -58,8 +58,13 @@ var hero = {
 var monster = {};
 var monstersCaught = 0;
 
+var minerImage = new Image();
+minerImage.src = "img/Miner.png";
+
 // Handle keyboard controls
 var keysDown = {};
+
+
 
 addEventListener("keydown", function (e) {
   keysDown[e.keyCode] = true;
@@ -96,18 +101,21 @@ var update = function (modifier) {
   if (39 in keysDown) { // Player holding right
     hero.x += hero.speed * modifier;
     if (hero.x > 1150) {
-    	//add website
+    	window.location.href = "www.kyleheilman.com/main";
     }
   }
   if(32 in keysDown) { //Holding space
+    ctx.drawImage(minerImage, hero.x - 40, hero.y - 200);
+    
   	if(hero.x > 400 && hero.x < 500) {
-  		hero.x = 800;
+  		//hero.x = 800;
   	}
   	if(hero.x < 830 && hero.x > 740) {
-  		hero.x = 750;
+      ctx.fillText("Go right for ffdssdfsdsdsdfsdsdf", 600, 750);
+  		//hero.x = 750;
   	}
   	if (hero.x < 220 && hero.x > 60) {
-  		hero.x = 1150;
+  		//hero.x = 1150;
   	}
   	
   }
@@ -144,17 +152,19 @@ var render = function () {
   ctx.fillStyle = "rgb(250, 250, 250)";
   ctx.font = "24px Helvetica";
   ctx.textAlign = "left";
-  ctx.textBaseline = "top";
-  //ctx.fillText("Goblins caught: " + monstersCaught, 32, 32);
+  ctx.textBaseline = "bottom";
+  ctx.fillText("Press 'Space' to select", 600, 700);
+  ctx.fillText("R - Resume, S - Social, P - Projects", 530, 725);
+  ctx.fillText("Go right for full website", 600, 750);
 };
 
 // The main game loop
 var main = function () {
   var now = Date.now();
   var delta = now - then;
-
-  update(delta / 1000);
   render();
+  update(delta / 1000);
+  //render();
 
   then = now;
 
