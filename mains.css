@@ -36,8 +36,8 @@ IMG.cow{
 IMG.git{
 	position: relative;
 	left:45%;
-	top:2%;
-	width:14%;
+	top:0%;
+	width:12%;
 
 }
 
@@ -84,9 +84,9 @@ h5{
 
 }
 h4 {
-	position: absolute;
+	position: relative;
 	top:20%;
-	right:18%;
+	right:0%;
 	font-size: 200%;
 }
 h3{
