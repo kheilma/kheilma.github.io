@@ -101,7 +101,7 @@ var update = function (modifier) {
   if (39 in keysDown) { // Player holding right
     hero.x += hero.speed * modifier;
     if (hero.x > 1150) {
-    	window.location.href = "www.kyleheilman.com/main";
+    	window.location.href = "main";
     }
   }
   if(32 in keysDown) { //Holding space
