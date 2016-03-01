@@ -1,6 +1,6 @@
 
 body {
-	background-color: #D3D3D3;
+	background-color: #a2c3f9;
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -9,9 +9,9 @@ body {
 
 
 
-  #left, #right{
+   #right{
   	position: absolute;
-  	width:110vmin;
+  	width:100vmin;
   	height:93%;
 
   }
@@ -27,9 +27,10 @@ body {
     
 }
 #left {
+	position: absolute;
 	left:2%;
 	z-index: -1;
-	top:10%;
+	top:03%;
 }
 
 
@@ -54,11 +55,17 @@ IMG.linkd {
 	height: 80%;
 }
 
+IMG.cowa {
+	position: absolute;
+	width:93vmin;
+	height:93vh;
+}
+
 #box{
 	position: absolute;
 	background-color: #222222;
-	width:108vmin;
-	height:20vmin;
+	width:98.3vmin;
+	height: 20vh;
 	z-index: -1;
 	top: 100%;
 	left: 0%;
@@ -76,7 +83,7 @@ h1{
 	text-transform: uppercase;
 	
 	
-	overflow: hidden;
+	
 
 
 }	
