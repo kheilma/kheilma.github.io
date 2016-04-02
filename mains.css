@@ -17,11 +17,11 @@ body {
 #right{
     position:absolute;
     top: 50%;
-    left: 50%;
-    width:70em;
-    height:50em;
+    left: 55%;
+    width:900px;
+    height:800px;
     margin-top: -21%; /*set to a negative number 1/2 of your height*/
-    margin-left: -35em; /*set to a negative number 1/2 of your width*/
+    margin-left: -30%; /*set to a negative number 1/2 of your width*/
     
 	background-color: #FFC65D;
   
@@ -74,7 +74,7 @@ IMG.cowa {
 
 h1{
 	position: absolute;
-	right: 20%;
+	right: 23%;
 	top: -15%;
 	
 	font-size: 1000%;
