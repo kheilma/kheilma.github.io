@@ -17,9 +17,9 @@ body {
 #right{
     position:absolute;
     top: 50%;
-    left: 55%;
-    width:900px;
-    height:800px;
+    left: 50%;
+    width:55%;
+    height:85%;
     margin-top: -21%; /*set to a negative number 1/2 of your height*/
     margin-left: -30%; /*set to a negative number 1/2 of your width*/
     
