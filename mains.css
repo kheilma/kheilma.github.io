@@ -1,5 +1,10 @@
 
-@media screen and (min-width: 10px) {
+@media screen and 
+  (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+
 body {
 	background-color: #4FD5D6;
 }
@@ -110,7 +115,7 @@ h3{
  	text-decoration: none;
  }
 
-
+  }
 
 
 @media screen and (min-width: 500px) {
