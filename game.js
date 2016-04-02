@@ -109,16 +109,16 @@ var update = function (modifier) {
     
   	if(hero.x > 400 && hero.x < 500) {
   		window.open("https://www.linkedin.com/in/kheilma");
-        window.location.href = "main";
+     
           
   	}
   	if(hero.x < 830 && hero.x > 740) {
   		window.open("https://github.com/kheilma");
-        window.location.href = "main";
+      
   	}
   	if (hero.x < 220 && hero.x > 60) {
   		window.open("Resume.pdf");
-        window.location.href = "main";  
+         
   	}
   	
   }
