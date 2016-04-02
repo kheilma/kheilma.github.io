@@ -1,6 +1,9 @@
 
 body {
+    position: fixed;
 	background-color: #4FD5D6;
+    height: 100%;
+    width: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -14,18 +17,17 @@ body {
     position:absolute;
     top: 50%;
     left: 50%;
-    width:70em;
-    height:50em;
-    margin-top: -25em; /*set to a negative number 1/2 of your height*/
-    margin-left: -35em; /*set to a negative number 1/2 of your width*/
-    
+    width:55%;
+    height:85%;
+    margin-top: -21%; /*set to a negative number 1/2 of your height*/
+    margin-left: -27%; /*set to a negative number 1/2 of your width*/
 	background-color: #FFC65D;
-  
-
     z-index: -1;
     overflow-y:scroll;
     
+    
 }
+
 
 
 
@@ -66,7 +68,7 @@ h1{
 	right: 20%;
 	top: -15%;
 	
-	font-size: 170px;
+	font-size: 1000%;
 	font-family:"impact";
 	text-transform: uppercase;
     color: #404040;
