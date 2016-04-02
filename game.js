@@ -108,13 +108,17 @@ var update = function (modifier) {
     ctx.drawImage(minerImage, hero.x - 40, hero.y - 200);
     
   	if(hero.x > 400 && hero.x < 500) {
-  		//hero.x = 800;
+  		window.open("https://www.linkedin.com/in/kheilma");
+        window.location.href = "main";
+          
   	}
   	if(hero.x < 830 && hero.x > 740) {
-  		//hero.x = 750;
+  		window.open("https://github.com/kheilma");
+        window.location.href = "main";
   	}
   	if (hero.x < 220 && hero.x > 60) {
-  		//hero.x = 1150;
+  		window.open("Resume.pdf");
+        window.location.href = "main";  
   	}
   	
   }
