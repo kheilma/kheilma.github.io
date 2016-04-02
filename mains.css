@@ -95,11 +95,11 @@ h2 {
 	
 }
 h5{
-	color:#93648D;
+	color:white;
 	position:absolute;
 	left:0%;
-	font-size: 3vmin;
-	top:0%;
+	font-size: 5vmin;
+	top:-30%;
 	
 
 }
@@ -114,9 +114,9 @@ h4 {
 }
 h3{
 	position: absolute;
-	color:#93648D;
-	top:50%;
-	font-size: 1.5vmin;
+	color:white;
+	top:25%;
+	font-size: 2vmin;
 	left:0%;
 	
 }
@@ -130,4 +130,22 @@ h3{
  	height: 100%;
  	width: 20vmin;
  	text-decoration: none;
+ }
+ 
+ h8{
+    position: absolute;
+	color:white;
+	top:80%;
+	font-size: 2vmin;
+	left:40%;
+	
+ }
+ 
+ h9{
+    position: absolute;
+	color:white;
+	top:80%;
+	font-size: 2vmin;
+	left:30%;
+	
  }
