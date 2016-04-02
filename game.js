@@ -2,7 +2,7 @@
 
 
 function show() {
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 700) {
         window.location.href = "main";
     }
         document.getElementById("myDiv").style.display="block";
