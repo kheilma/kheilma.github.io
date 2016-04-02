@@ -18,10 +18,10 @@ body {
     position:absolute;
     top: 50%;
     left: 50%;
-    width:55%;
-    height:85%;
-    margin-top: -21%; /*set to a negative number 1/2 of your height*/
-    margin-left: -30%; /*set to a negative number 1/2 of your width*/
+    width:70em;
+    height:50em;
+    margin-top: -25em; /*set to a negative number 1/2 of your height*/
+    margin-left: -35em; /*set to a negative number 1/2 of your width*/
     
 	background-color: #FFC65D;
   
@@ -74,7 +74,7 @@ IMG.cowa {
 
 h1{
 	position: absolute;
-	right: 23%;
+	right: 20%;
 	top: -15%;
 	
 	font-size: 1000%;
