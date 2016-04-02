@@ -1,7 +1,14 @@
+
+
+
 function show() {
+    if (window.innerWidth < 600) {
+        window.location.href = "main";
+    }
         document.getElementById("myDiv").style.display="block";
         setTimeout("hide()", 2410);
       }
+      
     function include(filename)
     {
     var head = document.getElementsByTagName('head')[0];
@@ -78,6 +85,7 @@ addEventListener("keyup", function (e) {
 var reset = function () {
   hero.x = canvas.width / 2 - 100;
   hero.y = canvas.height / 2.2 + 70;
+  hero.space = false;
 
   // Throw the monster somewhere on the screen randomly
   monster.x = 32 + (Math.random() * (canvas.width - 64));
@@ -105,21 +113,31 @@ var update = function (modifier) {
     }
   }
   if(32 in keysDown) { //Holding space
+      hero.space = true;
+      
+  }
+  if (hero.space) {
     ctx.drawImage(minerImage, hero.x - 40, hero.y - 200);
     
   	if(hero.x > 400 && hero.x < 500) {
+          window.location.href = "main";
   		window.open("https://www.linkedin.com/in/kheilma");
-     
           
   	}
   	if(hero.x < 830 && hero.x > 740) {
+         
+        window.location.href = "main";
   		window.open("https://github.com/kheilma");
       
   	}
   	if (hero.x < 220 && hero.x > 60) {
+          window.location.href = "main";
   		window.open("Resume.pdf");
          
   	}
+      
+      hero.space = false;
+      
   	
   }
 
