@@ -1,37 +1,36 @@
 
 body {
-	background-color: #a2c3f9;
+	background-color: #4FD5D6;
 	width: 100%;
 	height: 100%;
 	position: fixed;
 
 }
 
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
 
-
-   #right{
-  	position: absolute;
-  	width:100vmin;
-  	height:93%;
-
-  }
+  
 
 #right{
-	background-color: white;
-    right:02%;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width:70em;
+    height:50em;
+    margin-top: -25em; /*set to a negative number 1/2 of your height*/
+    margin-left: -35em; /*set to a negative number 1/2 of your width*/
+    border: 1px solid #ccc;
+	background-color: #FFC65D;
+  
 
     z-index: -1;
-    top:03%;
-    
-    overflow-y:auto;
+    overflow-y:scroll;
     
 }
-#left {
-	position: absolute;
-	left:2%;
-	z-index: -1;
-	top:03%;
-}
+
 
 
 IMG.cow{
@@ -64,10 +63,10 @@ IMG.cowa {
 #box{
 	position: absolute;
 	background-color: #222222;
-	width:98.3vmin;
-	height: 20vh;
+	width:100%;
+	height: 30%;
 	z-index: -1;
-	top: 100%;
+	top: 140%;
 	left: 0%;
 	white-space: nowrap;
 	overflow: hidden;
@@ -76,25 +75,32 @@ IMG.cowa {
 h1{
 	position: absolute;
 	right: 30%;
-	top: 20%;
-	font-weight: 700;
-	font-size: 6vmin;
+	top: -15%;
+	
+	font-size: 1000%;
 	font-family:"impact";
 	text-transform: uppercase;
-	
-	
-	
-
-
+    color: #404040;
 }	
-h2 {
-	position: absolute;
-	right: 25%;
-	top:33%;
+
+h6 {
+   position: absolute;
+	right: 5%;
+	top:95%;
 	font-size: 3.5vmin;
 	
-	font-family: "impact";
 	
+	color: #404040;
+    
+}
+h2 {
+	position: absolute;
+	right: 20%;
+	top:30%;
+	font-size: 800%;
+	
+	font-family: "impact";
+	color: #404040;
 	
 }
 h5{
@@ -113,6 +119,7 @@ h4 {
 	font-size: 200%;
 	white-space: nowrap;
 	font-size: 3vmin;
+ 
 }
 h3{
 	position: absolute;
